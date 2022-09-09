@@ -2,7 +2,7 @@ const carrusel = document.querySelector(".carrusel-items");
 
 let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
 let intervalo = null;
-let step = 1;
+let step = 1.1;
 const start = () => {
     intervalo = setInterval(function () {
         carrusel.scrollLeft = carrusel.scrollLeft + step;
@@ -21,10 +21,10 @@ const stop = () => {
     clearInterval(intervalo);
 };
 
-carrusel.addEventListener('mouseover', ()=> {
+carrusel.addEventListener('mouseover', () => {
     stop();
 });
-carrusel.addEventListener('mouseout', ()=> {
+carrusel.addEventListener('mouseout', () => {
     start();
 });
 
